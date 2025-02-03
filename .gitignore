@@ -1,0 +1,134 @@
+# Dependencies
+node_modules/
+venv/
+.env
+.python-version
+ENV/
+env/
+
+# Build outputs
+build/
+dist/
+*.pyc
+__pycache__/
+*.egg-info/
+develop-eggs/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.so
+.Python
+MANIFEST
+
+# IDE and Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+.project
+.classpath
+.settings/
+*.sublime-workspace
+*.sublime-project
+
+# Local development
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+local_settings.py
+db.sqlite3
+db.sqlite3-journal
+media/
+static/
+staticfiles/
+
+# Logs
+*.log
+logs/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Mobile app specific
+frontend/mobile/ios/Pods/
+frontend/mobile/android/app/build/
+frontend/mobile/android/build/
+frontend/mobile/android/.gradle/
+frontend/mobile/android/local.properties
+frontend/mobile/android/keystore.properties
+.expo/
+*.jks
+*.p8
+*.p12
+*.key
+*.mobileprovision
+*.orig.*
+web-build/
+
+# Project-specific isolation
+.npm-packages/
+.npm-cache/
+.pip/
+.pip-cache/
+.npmrc
+.pnp/
+.pnp.js
+
+# Testing
+coverage/
+.coverage
+htmlcov/
+.tox/
+.nox/
+.pytest_cache/
+
+# System files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Additional project specifics
+# Blockchain
+blockchain/build/
+blockchain/node_modules/
+
+# IoT
+*.hex
+*.bin
+*.elf
+
+# Rasa
+models/
+.rasa/
+
+# Firebase
+firebase-debug.log
+firebase-debug.*.log
+.firebase/
+
+# SSL/TLS certificates
+*.pem
+*.key
+*.crt
+*.cer
+*.der
+*.priv
+
+# Backup files
+*.bak
+*.backup
+*~
+
+# Local environment
+.pyenv/

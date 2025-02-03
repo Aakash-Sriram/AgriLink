@@ -1,0 +1,40 @@
+default_platform(:android)
+
+platform :android do
+  desc "Deploy to Play Store"
+  lane :deploy do
+    gradle(
+      task: 'bundle',
+      build_type: 'Release',
+      project_dir: 'android/'
+    )
+    
+    upload_to_play_store(
+      track: 'internal',
+      aab: '../android/app/build/outputs/bundle/release/app-release.aab',
+      json_key_data: ENV['PLAY_STORE_CONFIG_JSON'],
+      skip_upload_metadata: false,
+      skip_upload_images: false,
+      skip_upload_screenshots: false
+    )
+  end
+end
+
+platform :ios do
+  desc "Deploy to App Store"
+  lane :deploy do
+    build_ios_app(
+      workspace: "ios/AgriLink.xcworkspace",
+      scheme: "AgriLink",
+      export_method: "app-store",
+      configuration: "Release"
+    )
+    
+    upload_to_app_store(
+      api_key: ENV['APP_STORE_CONNECT_API_KEY'],
+      skip_screenshots: false,
+      skip_metadata: false,
+      force: true
+    )
+  end
+end 
